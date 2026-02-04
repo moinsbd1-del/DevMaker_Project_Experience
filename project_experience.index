@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevMaker Consultant | Interactive Projects</title>
+    <style>
+      :root {
+        --primary-grad: linear-gradient(
+          135deg,
+          #6a11cb 0%,
+          #2575fc 100%
+        ); /* Vibrant Purple-Blue */
+        --secondary-grad: linear-gradient(
+          135deg,
+          #11998e 0%,
+          #38ef7d 100%
+        ); /* Fresh Green-Teal */
+        --accent-grad: linear-gradient(
+          135deg,
+          #ff9966 0%,
+          #ff5e62 100%
+        ); /* Warm Orange-Red */
+      }
+
+      body {
+        background: #f0f2f5;
+        font-family: "Segoe UI", Roboto, sans-serif;
+        padding: 50px 20px;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        border: none;
+      }
+
+      .project-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Photo Container */
+      .image-holder {
+        width: 100%;
+        height: 230px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .image-holder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+
+      .project-card:hover .image-holder img {
+        transform: scale(1.1);
+      }
+
+      /* Content Section */
+      .card-body {
+        padding: 25px;
+        background: #fff;
+      }
+
+      .card-body h3 {
+        margin: 0 0 10px 0;
+        font-size: 22px;
+        color: #333;
+      }
+
+      .card-body p {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      /* Vibrant Labels */
+      .label {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 6px 15px;
+        border-radius: 30px;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+      }
+
+      /* Buttons with Gradient */
+      .details-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        transition: 0.3s;
+        background: var(--primary-grad);
+      }
+
+      .details-btn:hover {
+        opacity: 0.9;
+        box-shadow: 0 10px 20px rgba(37, 117, 252, 0.3);
+      }
+
+      /* Different Colors for Different Projects */
+      .agro {
+        background: var(--secondary-grad);
+      }
+      .climate {
+        background: var(--primary-grad);
+      }
+      .market {
+        background: var(--accent-grad);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="label agro">PKSF Funded</div>
+        <div class="image-holder">
+          <img
+            src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=600&q=80"
+            alt="Agriculture"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Agro-Value Chain</h3>
+          <p>
+            Developing competitive and inclusive agricultural market systems for
+            marginalized farmers.
+          </p>
+          <a href="agro_details.html" class="details-btn">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="label climate">Donor Project</div>
+        <div class="image-holder">
+          <img
+            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=600&q=80"
+            alt="Climate"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Climate Resilience</h3>
+          <p>
+            Designing specialized financial products for vulnerable groups in
+            the coastal belt of Bangladesh.
+          </p>
+          <a
+            href="climate_resilience.html"
+            class="details-btn"
+            style="background: var(--primary-grad)"
+            >Learn More →</a
+          >
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="label market">RMTP / PACE</div>
+        <div class="image-holder">
+          <img
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80"
+            alt="Market"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Market Systems</h3>
+          <p>
+            Developing competitive and inclusive market links for small-scale
+            producers.
+          </p>
+          <a href="market_systems.html" class="details-btn">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="label climate">MFI & SME</div>
+        <div class="image-holder">
+          <img
+            src=https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=600
+            alt="Finance"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Microfinance & SME</h3>
+          <p>
+            Capacity building for MFIs and SMEs to ensure sustainable financial
+            growth.
+          </p>
+          <a href="microfinance.html" class="details-btn">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="label agro">Data Insights</div>
+        <div class="image-holder">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+            alt="Research"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Impact Assessments</h3>
+          <p>
+            Baseline studies and data-driven insights for effective development
+            projects.
+          </p>
+          <a href="assessments.html" class="details-btn">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="label market">Digital Tools</div>
+        <div class="image-holder">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+            alt="Digital"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Digital Literacy</h3>
+          <p>
+            Empowering farmers and MSMEs with modern digital tools and training.
+          </p>
+          <a href="digital_literacy.html" class="details-btn">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="label climate">Response</div>
+        <div class="image-holder">
+          <img
+            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80"
+            alt="Humanitarian"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Disaster Management</h3>
+          <p>
+            Strategic programs for humanitarian response and disaster risk
+            reduction.
+          </p>
+          <a href="disaster_mgmt.html" class="details-btn">Learn More →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="label agro">Policy</div>
+        <div class="image-holder">
+          <img
+            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80"
+            alt="Policy"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Research & Policy</h3>
+          <p>
+            Providing evidence-based research and policy advisory for
+            organizations.
+          </p>
+          <a href="research_policy.html" class="details-btn">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
